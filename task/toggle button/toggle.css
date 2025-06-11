@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+     
+}
+
+ .Toggle{
+    width: 100vh;
+    height: 100vh;
+    background-color: rgb(219, 216, 200);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button {
+    width: 200px;
+    height: 100px;
+    background-color: rgb(222, 44, 31);
+    border-radius: 200px;
+    cursor: pointer;
+    position: relative;
+
+
+}
+.button::before{
+
+   content: "";
+   width: 90px;
+   height: 90px;
+   background-color: rgb(0, 0, 0);
+   border-radius: 200px;
+   margin: 5px;
+      position: absolute;
+}
+
+input:checked + .button{
+    background-color: rgb(39, 221, 7);
+
+}
+
+input:checked + .button::before{
+    transform: translate(100px);
+}
+input{
+    display: none;
+}
